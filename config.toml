@@ -3,6 +3,9 @@ languageCode = "en-us"
 title = "Brave New World"
 theme = ["PaperMod"]
 
+ShowReadingTime = true
+ShowBreadCrumbs = true
+
 [params]
   [params.HomeInfoParams]
     Title = "Welcome to Brave New World"
@@ -17,10 +20,6 @@ theme = ["PaperMod"]
     identifier = "linkedin"
     name = "LinkedIn"
     url = "https://www.linkedin.com/in/christykl/"
-  
-  ShowReadingTime = true
-  ShowBreadCrumbs = true
-  enableEmoji = true
 
 [menu]
   [[menu.main]]
