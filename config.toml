@@ -7,18 +7,18 @@ ShowReadingTime = true
 ShowBreadCrumbs = true
 
 [params]
-  math = true  # Enable math support
-  
-  [params.homeInfoParams]
+
+  math = true
+  [params.HomeInfoParams]
     Title = "Welcome to Brave New World"
     Content = "Hey there, this is Christy! You're visiting my personal blog where I document my self-learning and projects (mostly relating to deep learning/computer vision at the moment), as well as write about cool ideas and books I come across."
   
-  [[params.socialIcons]]
+  [[params.SocialIcons]]
     identifier = "github"
     name = "GitHub"
     url = "https://github.com/christykl"
   
-  [[params.socialIcons]]
+  [[params.SocialIcons]]
     identifier = "linkedin"
     name = "LinkedIn"
     url = "https://www.linkedin.com/in/christykl/"
@@ -40,9 +40,3 @@ ShowBreadCrumbs = true
     identifier = "archives"
     name = "Archives"
     url = "/archives/"
-
-[markup.highlight]
-  noClasses = false
-
-[markup.goldmark.renderer]
-  unsafe = true  # This allows HTML in Markdown
