@@ -1,5 +1,5 @@
 +++
-title = 'From Sight to Insight: Fei-Fei Li's new book, ImageNet, and the beginnings of the deep learning revolution'
+title = 'From Sight to Insight'
 date = 2024-06-28T14:51:45-04:00
 draft = false
 tags = ["learningdeeplearning", "vision", "bookish"]
