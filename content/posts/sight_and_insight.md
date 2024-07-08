@@ -1,6 +1,6 @@
 +++
 title = 'From Sight to Insight'
-date = 2024-06-28T14:51:45-04:00
+date = 2024-07-07T22:10:00-04:00
 draft = false
 tags = ["learningdeeplearning", "vision", "bookish"]
 +++
@@ -31,7 +31,7 @@ The fundamental CNN architecture that AlexNet was based on was introduced by Yan
 
 The next breakthrough of such magnitude was when ResNet, a residual neural network submitted to ILSVRC-2015, surpassed human-level recognition of ImageNet images with a test error of 3.57 percent ([He *et al.*, 2015](https://arxiv.org/pdf/1512.03385)). As researchers tried to train deeper and deeper models, they found that training error would actually start to increase. In theory, a deeper model with a training error no worse than a shallower model should be easy to construct: simply set the additional layers to identity mappings. However, the authors found that optimization methods were not able to find a solution at least as good as this identity-mapping solution. The ResNet paper introduced the concept of *residual learning* to address this degradation problem.
 
-![A residual learning block](/static/images/ResBlock.png)
+![A residual learning block](/images/ResBlock.png)
 
 Residual blocks consist of a stack of weight layers (two or three layers depending on the depth of the model) as well as a *skip connection* directly passing the input to the block to its output. Letting $H(x)$ be the underlying representation of this block, define the residual function to be learned as $F(x) := H(x)-x$. The overall output of the block is then given by $F(x) + x$. Now, it is very easy for the network to find the identity mapping by simply learning all the weights of $F(x)$ to be near zero. Stacking many of these residual blocks together forms a residual network. 
 
