@@ -33,6 +33,33 @@ To address the vanishing/exploding gradients problem, Long Short-Term Memory (LS
 
 The first gate is the forget gate, which weights the input vector and previous cell state and applies a sigmoid layer to squash the values between 0 and 1. The resulting vector is multiplied pointwise to the current cell state. This gate decides how much of the old information should be thrown out, with 0 representing deleting everything and 1 representing keeping everything. The next gate is the input gate, which decides how much and which new information is let in. A tanh and sigmoid layers are separately applied to the input to normalize the vector and determine each new feature input's importance, respectively. The two resulting vectors are multiplied together pointwise before being added to the cell state. Finally, the cell state is put through a tanh layer before being multiplied with the output gate sigmoid, controlling what information is returned and passed to the next cell state.
 
-### Attention
+There are other versions of the LSTM cell such as the Gated Recurrent Unit (GRU), which have different variations of the gating mechanism.
+### From Sequence-to-Sequence to Attention
+
+Another pitfall of vanilla neural networks is that they are unable to process variable-length structures: they map fixed-length inputs to fixed-length outputs by learning features over a fixed number of layers. RNNs can be be extended to mapping between variable-length sequences, allowing them to handle complex tasks such as machine translation and speech recognition. 
+
+{{< figure src="/images/seq2seq.png" alt="seq2seq" caption="Sequence-to-sequence encoder-decoder architecture ([*Deep Learning*. Goodfellow *et al.*, 2016](https://www.deeplearningbook.org/))." >}}
+
+The sequence-to-sequence model proposed by [Cho *et al.*, 2014](https://arxiv.org/pdf/1406.10788) and [Sustekever *et al.*, 2014](https://arxiv.org/pdf/1409.3215) achieves this by using an encoder-decoder architecture. It reads the input sequence and encodes a fixed-length context vector $C$, which is then taken as input to a decoder that generates an output sequence. Here, the encoder and decoder are both RNNs composed of LSTM cells or a similar gated network. 
+
+This formulation, however, is once again limited by the requirement that $C$ must be of fixed length. For a longer sequences, the context vector would have a hard time encoding a good representation of all of the information. 
+
+To address this issue, [Bahdanau, *et al.*, 2016](https://arxiv.org/pdf/1409.0473) introduced the attention mechanism. Instead of generating the output from a single fixed context vector, the decoder calculates a different context vector using all of the for each output word by weighting each hidden state of the encoder by an alignment score.
+
+{{< figure src="/images/attention.png" alt="attention" caption="RNN-based attention model ([Bahdanau, *et al.*, 2016](https://arxiv.org/pdf/1409.0473))." >}}
+
+Suppose that we have input sequence $\textbf{x} = [x_1,\dots,x_{T_x}]$ of length $T_x$ and target sequence $\textbf{y} = [y_1,\dots,y_{T_y}]$ of length $T_y$. The encoder, implemented as a bidirectional RNN to try to capture the context of words both before and after the target word, has hidden states $\textbf{h} = [h_1,\dots,h_{T_x}]$. The context vector $c_i$ for each target word $y_i$ is calculated as a weighted sum of all of the hidden states:
+$$
+\begin{aligned}
+ c_i = \displaystyle\sum_{j=1}^{T_x}\alpha_{ij}h_j
+\end{aligned}
+$$
+The weights $a_{ij}$ are the alignment scores given by:
+$$
+\begin{aligned}
+ \alpha_{ij} = \frac{\exp(a(s_{i-1},h_j))}{\Sigma_{k=1}^{T_x}\exp(a(s_{i-1},h_k))}
+\end{aligned}
+$$
+where the alignment model $a$ is a feedforward neural network that predicts the relevance of the inputs at position $j$ to the output at position $i$.
 
 ### It's All You Need??
