@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html>
+{{ partial "header.html" . }}
+<body>
+	<div class="container wrapper">
+		{{ partial "head.html" . }}
+
+		<div class="about-page">
+			<div class="about-content">
+				<div class="about-text">
+					<h1>About Me</h1>
+					<p>I'm Christy, a sophomore at MIT studying CS and Physics. Currently, I'm researching agents for automated bias detection in vision-language models.</p>
+					<p>In my free time, I like to read, play volleyball, and slowly but surely taste test every matcha drink in Boston.</p>
+					<p>If you too are passionate about any of the above, feel free to <a href="mailto:ckl@mit.edu">reach out</a>!</p>
+				</div>
+				<div class="about-image">
+					<img src="/images/pfp.png" alt="profile pic">
+				</div>
+			</div>
+		</div>
+
+		{{ with .Content }}{{ . }}{{ end }}
+	</div>
+	{{ partial "footer.html" . }}
+
+	<style>
+		.about-page {
+			padding: 2rem 0;
+		}
+		.about-content {
+			display: flex;
+			flex-direction: row;
+			align-items: center;
+			justify-content: space-between;
+			gap: 1rem;
+		}
+		.about-text {
+			flex: 1;
+		}
+		.about-image {
+			flex: 1;
+			display: flex;
+			justify-content: center;
+			align-items: center;
+		}
+		.about-image img {
+			max-width: 70%;
+			height: auto;
+			object-fit: cover;
+		}
+		@media (max-width: 768px) {
+			.about-content {
+				flex-direction: column;
+			}
+		}
+	</style>
+</body>
+</html>
