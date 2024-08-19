@@ -1,0 +1,179 @@
+<!DOCTYPE html>
+<html>
+<head><script src="/livereload.js?mindelay=10&amp;v=2&amp;port=1313&amp;path=livereload" data-no-instant defer></script>
+	<meta charset="utf-8" />
+	<meta http-equiv="X-UA-Compatible" content="IE=edge"><title>Learning to Remember (and Forget) - Christy Li</title><link rel="icon" type="image/png" href=icons/favicon.ico /><meta name="viewport" content="width=device-width, initial-scale=1">
+	<meta property="og:url" content="http://localhost:1313/posts/learning_to_remember/">
+  <meta property="og:site_name" content="Christy Li">
+  <meta property="og:title" content="Learning to Remember (and Forget)">
+  <meta property="og:description" content="The Evolution of Memory in Neural Networks Recurrent Neural Networks A major limitation of vanilla neural networks is that they are unable to process variable-length structures: they map fixed-length inputs to fixed-length outputs by learning features over a fixed number of layers.">
+  <meta property="og:locale" content="en_us">
+  <meta property="og:type" content="article">
+    <meta property="article:section" content="posts">
+    <meta property="article:published_time" content="2024-07-31T01:05:21-04:00">
+    <meta property="article:modified_time" content="2024-07-31T01:05:21-04:00">
+    <meta property="article:tag" content="Learningdeeplearning">
+
+  <meta name="twitter:card" content="summary">
+  <meta name="twitter:title" content="Learning to Remember (and Forget)">
+  <meta name="twitter:description" content="The Evolution of Memory in Neural Networks Recurrent Neural Networks A major limitation of vanilla neural networks is that they are unable to process variable-length structures: they map fixed-length inputs to fixed-length outputs by learning features over a fixed number of layers.">
+<link href="https://fonts.googleapis.com/css?family=Ubuntu:300,400,300italic,400italic|Raleway:200,300" rel="stylesheet">
+
+	<link rel="stylesheet" type="text/css" media="screen" href="http://localhost:1313/css/normalize.css" />
+	<link rel="stylesheet" type="text/css" media="screen" href="http://localhost:1313/css/main.css" />
+	<link rel="stylesheet" type="text/css" href="http://localhost:1313/css/custom.css" />
+	<link rel="stylesheet" type="text/css" href="http://localhost:1313/css/dark.css"  />
+	<link rel="stylesheet" type="text/css" href="http://localhost:1313/css/custom-dark.css"  />
+
+	<script src="https://cdn.jsdelivr.net/npm/feather-icons/dist/feather.min.js"></script>
+	<script src="http://localhost:1313/js/main.js"></script>
+	<script src="http://localhost:1313/js/abc.js"></script>
+	<script src="http://localhost:1313/js/xyz.js"></script>
+	<script src="https://code.jquery.com/jquery-3.4.1.js"></script>
+</head>
+
+<body>
+	<div class="container wrapper post">
+		<div class="header">
+	<base href="http://localhost:1313/">
+	<h1 class="site-title"><a href="http://localhost:1313/">Christy Li</a></h1>
+	<div class="site-description"><h2></h2><nav class="nav social">
+			<ul class="flat"><a href="https://github.com/christykl" title="Github"><i data-feather="github"></i></a><a href="https://www.linkedin.com/in/christykl/" title="LinkedIn"><i data-feather="linkedin"></i></a></ul>
+		</nav>
+	</div>
+
+	<nav class="nav">
+		<ul class="flat">
+			
+			<li>
+				<a href="/">Home</a>
+			</li>
+			
+			<li>
+				<a href="/posts">Posts</a>
+			</li>
+			
+			<li>
+				<a href="/tags">Tags</a>
+			</li>
+			
+		</ul>
+	</nav>
+	<script src="https://polyfill.io/v3/polyfill.min.js?features=es6"></script>
+<script id="MathJax-script" async src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
+<script>
+  MathJax = {
+    tex: {
+      inlineMath: [['$', '$'], ['\\(', '\\)']],
+      displayMath: [['$$','$$'], ['\\[', '\\]']],
+      processEscapes: true,
+      processEnvironments: true
+    },
+    options: {
+      skipHtmlTags: ['script', 'noscript', 'style', 'textarea', 'pre']
+    }
+  };
+</script>
+</div>
+
+
+		<div class="post-header">
+			<h1 class="title">Learning to Remember (and Forget)</h1>
+			<div class="meta">Posted at &mdash; Jul 31, 2024</div>
+		</div>
+
+		<div class="markdown">
+			<h2 id="the-evolution-of-memory-in-neural-networks">The Evolution of Memory in Neural Networks</h2>
+<h3 id="recurrent-neural-networks">Recurrent Neural Networks</h3>
+<p>A major limitation of vanilla neural networks is that they are unable to process variable-length structures: they map fixed-length inputs to fixed-length outputs by learning features over a fixed number of layers. Further, traditional neural networks have no &ldquo;memory&rdquo;—when presented with sequential data such as this sentence, there is no easy way to use context learned from previous inputs to inform future outputs.</p>
+<figure><img src="/images/RNN_unroll.png"
+    alt="unrolled RNN"><figcaption>
+      <p>Unrolling a sequence-to-sequence RNN (<a href="https://www.deeplearningbook.org/"><em>Deep Learning</em>. Goodfellow <em>et al.</em>, 2016</a>).</p>
+    </figcaption>
+</figure>
+
+<p>Recurrent neural networks (RNNs) are a class of neural networks specialized for sequential data. They can learn dependencies from previous inputs in the sequence though a self-loop connection which maintains a hidden state. As a result, RNNs also have the advantage of sharing the same parameters over time steps, much like a 1D temporal convolution. At each time step $t$, the network updates the hidden state $h_t$ using the learned parameters $\theta$, the previous hidden state $h_{t-1}$, and an input $x_t$ if applicable. The hidden step at each time step can be written $h_t = f(h_{t-1},,x_t;, \theta_h)$, where $f$ is the transformation of the hidden layer. The hidden state effectively encodes a limited summary of relevant features from all previous input sequence vectors. The output can be written $o_t = g(h_{t};, \theta_t)$, where $g$ is the transformation of the output layer.</p>
+<figure><img src="/images/RNN_models.png"
+    alt="RNN architectures"><figcaption>
+      <p>Various basic RNN architectures (<a href="https://karpathy.github.io/2015/05/21/rnn-effectiveness/">Karpathy, 2015</a>).</p>
+    </figcaption>
+</figure>
+
+<p>A helpful way to visualize RNNs is to unroll them into a chain of repeated feedforward networks that share the same parameters at each timestep. There are several basic RNN structures including one-to-one, one-to-many, many-to-one, and many-to-many. Each is used for different applications. For example, one-to-one would be appropriate for vanilla neural network tasks such as image classification. Unsynced many-to-many could be used for translation tasks, taking in a sentence in one language and producing a corresponding sentence in the target language, while synced many-to-many could be used for frame-by-frame video classification (<a href="https://karpathy.github.io/2015/05/21/rnn-effectiveness/">Karpathy, 2015</a>).</p>
+<p>Using the unrolled view of the RNN, we can use backpropagation to learn the model parameters just as we do with feedforward networks. Since this backpropagation is performed over the states at different time steps, the algorithm is called backpropagation through time (BPTT).</p>
+<p>A well-known problem with RNNs is that they struggle to capture long-term dependencies, or remembering information over longer sequences. Consider the following sentence:</p>
+<blockquote>
+<p>&ldquo;The dog, which was a golden retriever with a friendly disposition and a penchant for chasing squirrels in the park near the old oak tree where children often played on sunny afternoons, wagged its tail.&rdquo;</p>
+</blockquote>
+<p>There is a long-term dependency between &ldquo;The dog&rdquo; at the beginning of the sentence and &ldquo;wagged its tail&rdquo; near the end. A model trying to predict that &ldquo;wagged its tail&rdquo; comes after dependent clause in the middle of the sentence must keep &ldquo;dog&rdquo; as the subject of the sentence despite all of the added context. Since there is a large distance between the two relevant phrases, the gradients calculated by BPTT will tend to vanish (or, less commonly, explode) as a result of repeated matrix multiplication, and the model will not be able to learn their connection.</p>
+<h3 id="long-short-term-memory">Long Short-Term Memory</h3>
+<p>To address the vanishing/exploding gradients problem, Long Short-Term Memory (LSTMs) were proposed. LSTMs are a type of gated RNN that are able to learn long-term dependencies. Individual LSTM cells replace the hidden state of the RNN with a more complicated recurrent network that includes an additional linear self-loop, allowing gradients to flow over long periods, subject to gating units. These gating units are dependent on the previous cell&rsquo;s state as well as the input sequence, allowing the LSTM to dynamically forget or add new information depending on context.</p>
+<figure><img src="/images/LSTM.png"
+    alt="LSTM"><figcaption>
+      <p>The inner workings of a LSTM cell (<a href="https://colah.github.io/posts/2015-08-Understanding-LSTMs/">Olah, 2015</a>).</p>
+    </figcaption>
+</figure>
+
+<p>The first gate is the forget gate, which weights the input vector and previous cell state and applies a sigmoid layer to squash the values between 0 and 1. The resulting vector is multiplied pointwise to the current cell state. This gate decides how much of the old information should be thrown out, with 0 representing deleting everything and 1 representing keeping everything. The next gate is the input gate, which decides how much and which new information is let in. A tanh and sigmoid layers are separately applied to the input to normalize the vector and determine each new feature input&rsquo;s importance, respectively. The two resulting vectors are multiplied together pointwise before being added to the cell state. Finally, the cell state is put through a tanh layer before being multiplied with the output gate sigmoid, controlling what information is returned and passed to the next cell state.</p>
+<p>There are other versions of the LSTM cell such as the Gated Recurrent Unit (GRU), which have different variations of the gating mechanism.</p>
+<h3 id="from-sequence-to-sequence-to-attention">From Sequence-to-Sequence to Attention</h3>
+<p>Another pitfall of vanilla neural networks is that they are unable to process variable-length structures: they map fixed-length inputs to fixed-length outputs by learning features over a fixed number of layers. RNNs can be be extended to mapping between variable-length sequences, allowing them to handle complex tasks such as machine translation and speech recognition.</p>
+<figure><img src="/images/seq2seq.png"
+    alt="seq2seq"><figcaption>
+      <p>Sequence-to-sequence encoder-decoder architecture (<a href="https://www.deeplearningbook.org/"><em>Deep Learning</em>. Goodfellow <em>et al.</em>, 2016</a>).</p>
+    </figcaption>
+</figure>
+
+<p>The sequence-to-sequence model proposed by <a href="https://arxiv.org/pdf/1406.10788">Cho <em>et al.</em>, 2014</a> and <a href="https://arxiv.org/pdf/1409.3215">Sustekever <em>et al.</em>, 2014</a> achieves this by using an encoder-decoder architecture. It reads the input sequence and encodes a fixed-length context vector $C$, which is then taken as input to a decoder that generates an output sequence. Here, the encoder and decoder are both RNNs composed of LSTM cells or a similar gated network.</p>
+<p>This formulation, however, is once again limited by the requirement that $C$ must be of fixed length. For a longer sequences, the context vector would have a hard time encoding a good representation of all of the information.</p>
+<p>To address this issue, <a href="https://arxiv.org/pdf/1409.0473">Bahdanau, <em>et al.</em>, 2016</a> introduced the attention mechanism. Instead of generating the output from a single fixed context vector, the decoder calculates a different context vector using all of the for each output word by weighting each hidden state of the encoder by an alignment score.</p>
+<figure><img src="/images/attention.png"
+    alt="attention"><figcaption>
+      <p>RNN-based attention model (<a href="https://arxiv.org/pdf/1409.0473">Bahdanau, <em>et al.</em>, 2016</a>).</p>
+    </figcaption>
+</figure>
+
+<p>Suppose that we have input sequence $\textbf{x} = [x_1,\dots,x_{T_x}]$ of length $T_x$ and target sequence $\textbf{y} = [y_1,\dots,y_{T_y}]$ of length $T_y$. The encoder, implemented as a bidirectional RNN to try to capture the context of words both before and after the target word, has hidden states $\textbf{h} = [h_1,\dots,h_{T_x}]$. The context vector $c_i$ for each target word $y_i$ is calculated as a weighted sum of all of the hidden states:
+$$
+\begin{aligned}
+c_i = \displaystyle\sum_{j=1}^{T_x}\alpha_{ij}h_j
+\end{aligned}
+$$
+The weights $a_{ij}$ are the alignment scores given by:
+$$
+\begin{aligned}
+\alpha_{ij} = \frac{\exp(a(s_{i-1},h_j))}{\Sigma_{k=1}^{T_x}\exp(a(s_{i-1},h_k))}
+\end{aligned}
+$$
+where the alignment model $a$ is a feedforward neural network that predicts the relevance of the inputs at position $j$ to the output at position $i$.</p>
+<h3 id="its-all-you-need">It&rsquo;s All You Need??</h3>
+
+		</div>
+
+		<div class="post-tags">
+			
+				
+					<nav class="nav tags">
+							<ul class="flat">
+								
+								<li><a href="/tags/learningdeeplearning">learningdeeplearning</a></li>
+								
+							</ul>
+					</nav>
+				
+			
+		</div>
+		</div>
+	<div class="footer wrapper">
+  <nav class="nav">
+    <div>
+       © Copyright 2024 | 
+      Built with <a href="https://gohugo.io">Hugo</a>, modified from 
+	  <a href="https://github.com/vividvilla/ezhil">Ezhil theme</a>
+    </div>
+  </nav>
+</div><script>
+  feather.replace();
+</script>
+</body>
+</html>

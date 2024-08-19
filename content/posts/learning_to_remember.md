@@ -1,8 +1,9 @@
 +++
 title = 'Learning to Remember (and Forget)'
 date = 2024-07-31T01:05:21-04:00
-draft = false
 tags = ["learningdeeplearning"]
+disqus = false
+math = true
 +++
 
 ## The Evolution of Memory in Neural Networks

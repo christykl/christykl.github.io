@@ -1,0 +1,148 @@
+<!DOCTYPE html>
+<html>
+<head><script src="/livereload.js?mindelay=10&amp;v=2&amp;port=1313&amp;path=livereload" data-no-instant defer></script>
+	<meta charset="utf-8" />
+	<meta http-equiv="X-UA-Compatible" content="IE=edge"><title>From Sight to Insight - Christy Li</title><link rel="icon" type="image/png" href=icons/favicon.ico /><meta name="viewport" content="width=device-width, initial-scale=1">
+	<meta property="og:url" content="http://localhost:1313/posts/sight_and_insight/">
+  <meta property="og:site_name" content="Christy Li">
+  <meta property="og:title" content="From Sight to Insight">
+  <meta property="og:description" content="Fei-Fei Li’s new book, ImageNet, and the beginnings of the deep learning revolution The ability to perceive our surroundings encouraged us to develop a mechanism for integrating, analyzing, and ultimately making sense of that perception.">
+  <meta property="og:locale" content="en_us">
+  <meta property="og:type" content="article">
+    <meta property="article:section" content="posts">
+    <meta property="article:published_time" content="2024-07-07T22:10:00-04:00">
+    <meta property="article:modified_time" content="2024-07-07T22:10:00-04:00">
+    <meta property="article:tag" content="Learningdeeplearning">
+    <meta property="article:tag" content="Vision">
+    <meta property="article:tag" content="Bookish">
+
+  <meta name="twitter:card" content="summary">
+  <meta name="twitter:title" content="From Sight to Insight">
+  <meta name="twitter:description" content="Fei-Fei Li’s new book, ImageNet, and the beginnings of the deep learning revolution The ability to perceive our surroundings encouraged us to develop a mechanism for integrating, analyzing, and ultimately making sense of that perception.">
+<link href="https://fonts.googleapis.com/css?family=Ubuntu:300,400,300italic,400italic|Raleway:200,300" rel="stylesheet">
+
+	<link rel="stylesheet" type="text/css" media="screen" href="http://localhost:1313/css/normalize.css" />
+	<link rel="stylesheet" type="text/css" media="screen" href="http://localhost:1313/css/main.css" />
+	<link rel="stylesheet" type="text/css" href="http://localhost:1313/css/custom.css" />
+	<link rel="stylesheet" type="text/css" href="http://localhost:1313/css/dark.css"  />
+	<link rel="stylesheet" type="text/css" href="http://localhost:1313/css/custom-dark.css"  />
+
+	<script src="https://cdn.jsdelivr.net/npm/feather-icons/dist/feather.min.js"></script>
+	<script src="http://localhost:1313/js/main.js"></script>
+	<script src="http://localhost:1313/js/abc.js"></script>
+	<script src="http://localhost:1313/js/xyz.js"></script>
+	<script src="https://code.jquery.com/jquery-3.4.1.js"></script>
+</head>
+
+<body>
+	<div class="container wrapper post">
+		<div class="header">
+	<base href="http://localhost:1313/">
+	<h1 class="site-title"><a href="http://localhost:1313/">Christy Li</a></h1>
+	<div class="site-description"><h2></h2><nav class="nav social">
+			<ul class="flat"><a href="https://github.com/christykl" title="Github"><i data-feather="github"></i></a><a href="https://www.linkedin.com/in/christykl/" title="LinkedIn"><i data-feather="linkedin"></i></a></ul>
+		</nav>
+	</div>
+
+	<nav class="nav">
+		<ul class="flat">
+			
+			<li>
+				<a href="/">Home</a>
+			</li>
+			
+			<li>
+				<a href="/posts">Posts</a>
+			</li>
+			
+			<li>
+				<a href="/tags">Tags</a>
+			</li>
+			
+		</ul>
+	</nav>
+	<script src="https://polyfill.io/v3/polyfill.min.js?features=es6"></script>
+<script id="MathJax-script" async src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
+<script>
+  MathJax = {
+    tex: {
+      inlineMath: [['$', '$'], ['\\(', '\\)']],
+      displayMath: [['$$','$$'], ['\\[', '\\]']],
+      processEscapes: true,
+      processEnvironments: true
+    },
+    options: {
+      skipHtmlTags: ['script', 'noscript', 'style', 'textarea', 'pre']
+    }
+  };
+</script>
+</div>
+
+
+		<div class="post-header">
+			<h1 class="title">From Sight to Insight</h1>
+			<div class="meta">Posted at &mdash; Jul 7, 2024</div>
+		</div>
+
+		<div class="markdown">
+			<h2 id="fei-fei-lis-new-book-imagenet-and-the-beginnings-of-the-deep-learning-revolution">Fei-Fei Li’s new book, ImageNet, and the beginnings of the deep learning revolution</h2>
+<blockquote>
+<p>The ability to perceive our surroundings encouraged us to develop a mechanism for integrating, analyzing, and ultimately making sense of that perception. And vision was, by far, its most vibrant constituent. </p>
+<p>— <em>Fei-Fei Li, The Worlds I See</em></p>
+</blockquote>
+<h3 id="the-worlds-i-see-curiosity-exploration-and-discovery-at-the-dawn-of-ai"><em>The Worlds I See: Curiosity, Exploration, and Discovery at the Dawn of AI</em></h3>
+<p>Stanford computer science professor and AI pioneer Fei-Fei Li&rsquo;s new book <em>The Worlds I See</em> is a personal memoir of growing up an aspiring scientist in a low-income, immigrant Chinese household as well as a first-hand account of the beginnings of the AI revolution. Li did her undergrad in physics at Princeton before deciding to focus jointly on computing and cognitive science for her PhD at Caltech. More specifically, Li was interested in the mechanism of vision.</p>
+<p>One of her earliest experiments was actually a psychophysics study where she found that subjects are able to extract the gist of entire visual scenes after just milliseconds of exposure <em>while their attentions were focused entirely on another task</em>. The sheer speed and ease with which our brains our able to process visual cues completely underneath the hood of conscious thought is pretty incredible. Moreover, Li found that human visual perception is based on the recognition of things as part of well-defined categories (i.e. objects, people, places), as opposed to colors or textures or contours.</p>
+<p>Inspired by this object-oriented theory of vision, in 2003, Li and her collaborators compiled the Caltech 101 dataset, comprised of over 9,000 images belonging to 101 different object categories. This made it the largest dataset at the time for machine learning. The performance gains on one-shot object categorization tasks trained on the dataset convinced Li of the power of bigger and more diverse datasets for improving models at a time when the field was primarily focused on improving algorithms.</p>
+<h3 id="imagenet">ImageNet</h3>
+<p>Li is most known for her work on the ImageNet dataset and the corresponding ImageNet Large Scale Visual Recognition Challenge (ILSVRC). Completed in 2009, ImageNet is a database composed of 3.2 million images spread over more than 5,000 categories (<a href="https://image-net.org/static_files/papers/imagenet_cvpr09.pdf">Deng <em>et al.</em>, 2009</a>). The annual ILSVRC, which ran from 2010 to 2017, provided a standardized dataset and evaluation metrics for comparing different image classification models. Throughout the course of its run, the competition drove significant advancements in deep learning and CNNs for visual recognition tasks.</p>
+<h3 id="alexnet-and-resnet-break-barriers">AlexNet and ResNet Break Barriers</h3>
+<p>A breakthrough occurred in 2012 when AlexNet, an eight-layer CNN submitted by Alex Krizhevsky, Ilya Sutskever, and Geoffrey Hinton, dramatically outperformed traditional computer vision models, achieving a top-5 error of 15.3 percent and beating out the runner-up by over 10 percent (<a href="https://proceedings.neurips.cc/paper_files/paper/2012/file/c399862d3b9d6b76c8436e924a68c45b-Paper.pdf">Krizhevsky <em>et al.</em>, 2012</a>). AlexNet&rsquo;s overwhelming success demonstrated the potential of deeper networks for improved performance and was one of the first models to leverage GPUs to accelerate training. These innovations led to a resurgence of interest in neural networks in the field and laid the groundwork for modern deep learning practices.</p>
+<p>The fundamental CNN architecture that AlexNet was based on was introduced by Yann LeCun to recognize hand-written postal codes all the way back in 1989 (<a href="http://yann.lecun.com/exdb/publis/pdf/lecun-89e.pdf">LeCun <em>et al.</em>, 1989</a>). However, despite the promise shown by CNNs, they remained largely underutilized in the broader field of computer vision for over two decades due to limitations in computational power and the lack of large-scale, labeled datasets required for training deep networks effectively. The paradigm shift that AlexNet induced owed largely to a perfect storm of the availability of big data through ImageNet and improvements in GPU computation. So, while AlexNet was an incredible breakthrough for deep learning, it was only possible because it stood on the shoulders of giants.</p>
+<p>The next breakthrough of such magnitude was when ResNet, a residual neural network submitted to ILSVRC-2015, surpassed human-level recognition of ImageNet images with a test error of 3.57 percent (<a href="https://arxiv.org/pdf/1512.03385">He <em>et al.</em>, 2015</a>). As researchers tried to train deeper and deeper models, they found that training error would actually start to increase. In theory, a deeper model with a training error no worse than a shallower model should be easy to construct: simply set the additional layers to identity mappings. However, the authors found that optimization methods were not able to find a solution at least as good as this identity-mapping solution. The ResNet paper introduced the concept of <em>residual learning</em> to address this degradation problem.</p>
+<figure><img src="/images/ResBlock.png"
+    alt="ResBlock"><figcaption>
+      <p>A residual learning block</p>
+    </figcaption>
+</figure>
+
+<p>Residual blocks consist of a stack of weight layers (two or three layers depending on the depth of the model) as well as a <em>skip connection</em> directly passing the input to the block to its output. Letting $H(x)$ be the underlying representation of this block, define the residual function to be learned as $F(x) := H(x)-x$. The overall output of the block is then given by $F(x) + x$. Now, it is very easy for the network to find the identity mapping by simply learning all the weights of $F(x)$ to be near zero. Stacking many of these residual blocks together forms a residual network.</p>
+<p>The shallower ResNet-18 and ResNet-34 models use &ldquo;Basic Blocks&rdquo; which contain two 3x3 convolutional layers spanned by a skip connection. The deeper ResNet-50, ResNet-101, and ResNet-152 models use &ldquo;Bottleneck Blocks&rdquo; which contain 1x1, 3x3, and 1x1 convolutional layers, with a skip connection spanning all three layers. The 1x1 convolutions reduce and then increase dimensions such that the 3x3 convolution has smaller input and output dimensions, reducing time complexity and model size.</p>
+<p>This skip connection method reminds me a lot of how some shortest path problems can be solved using a graph representation that involve additional edges which skip certain nodes (depending on the problem constraints) and may or may not be used as part of an optimal solution. Might be interesting to explore applications of graph theory to neural network design in a future post!</p>
+<h3 id="some-philosophical-mumbo-jumbo">Some Philosophical Mumbo Jumbo</h3>
+<p>One major inspiration Li cites for her line of work actually stems from evolutionary biology, in particular one theory for the cause of the Cambrian explosion. The theory posits that, back when we were all microbes in the primordial soup, there was no need for intelligence because there was no way for us to sense outside stimuli to react to. Then, photosensitivity evolved. Suddenly, for the first time, organisms were awakened to a world outside themselves. Those that leveraged this newfound power to gain an evolutionary edge—navigating toward food or away from predators—survived to pass on their abilities. As photosensitivity matured into vision and other senses began to evolve, a central unit for processing this plethora of new data from the outside world became necessary. Ergo, the brain.</p>
+<p>In other words, perception gave rise to intelligence, and sight became insight (<a href="https://www.ted.com/talks/fei_fei_li_with_spatial_intelligence_ai_will_understand_the_real_world?utm_campaign=tedspread&amp;utm_medium=referral&amp;utm_source=tedcomshare">Li, 2024</a>). For me, framing the study of computer vision, as well as sensing and planning in robotics, as evolution-inspired approaches to coaxing out intelligence from effective perception is so incredibly compelling and fascinating.</p>
+
+		</div>
+
+		<div class="post-tags">
+			
+				
+					<nav class="nav tags">
+							<ul class="flat">
+								
+								<li><a href="/tags/learningdeeplearning">learningdeeplearning</a></li>
+								
+								<li><a href="/tags/vision">vision</a></li>
+								
+								<li><a href="/tags/bookish">bookish</a></li>
+								
+							</ul>
+					</nav>
+				
+			
+		</div>
+		</div>
+	<div class="footer wrapper">
+  <nav class="nav">
+    <div>
+       © Copyright 2024 | 
+      Built with <a href="https://gohugo.io">Hugo</a>, modified from 
+	  <a href="https://github.com/vividvilla/ezhil">Ezhil theme</a>
+    </div>
+  </nav>
+</div><script>
+  feather.replace();
+</script>
+</body>
+</html>
