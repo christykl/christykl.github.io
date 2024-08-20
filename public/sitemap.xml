@@ -8,25 +8,17 @@
     <loc>http://localhost:1313/posts/learning_to_remember/</loc>
     <lastmod>2024-07-31T01:05:21-04:00</lastmod>
   </url><url>
-    <loc>http://localhost:1313/tags/learningdeeplearning/</loc>
-    <lastmod>2024-07-31T01:05:21-04:00</lastmod>
-  </url><url>
     <loc>http://localhost:1313/posts/</loc>
     <lastmod>2024-07-31T01:05:21-04:00</lastmod>
-  </url><url>
-    <loc>http://localhost:1313/tags/</loc>
-    <lastmod>2024-07-31T01:05:21-04:00</lastmod>
-  </url><url>
-    <loc>http://localhost:1313/tags/bookish/</loc>
-    <lastmod>2024-07-07T22:10:00-04:00</lastmod>
   </url><url>
     <loc>http://localhost:1313/posts/sight_and_insight/</loc>
     <lastmod>2024-07-07T22:10:00-04:00</lastmod>
   </url><url>
-    <loc>http://localhost:1313/tags/vision/</loc>
-    <lastmod>2024-07-07T22:10:00-04:00</lastmod>
-  </url><url>
     <loc>http://localhost:1313/posts/brave_new_world/</loc>
     <lastmod>2024-06-26T18:14:25-04:00</lastmod>
+  </url><url>
+    <loc>http://localhost:1313/projects/</loc>
+  </url><url>
+    <loc>http://localhost:1313/tags/</loc>
   </url>
 </urlset>

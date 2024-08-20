@@ -1,7 +1,6 @@
 +++
 title = 'From Sight to Insight'
 date = 2024-07-07T22:10:00-04:00
-tags = ["learningdeeplearning", "vision", "bookish"]
 disqus = false
 math = true
 +++

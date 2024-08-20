@@ -7,21 +7,6 @@
     <generator>Hugo</generator>
     <language>en-us</language>
     <copyright>© Copyright 2024</copyright>
-    <lastBuildDate>Wed, 31 Jul 2024 01:05:21 -0400</lastBuildDate>
     <atom:link href="http://localhost:1313/tags/learningdeeplearning/index.xml" rel="self" type="application/rss+xml" />
-    <item>
-      <title>Learning to Remember (and Forget)</title>
-      <link>http://localhost:1313/posts/learning_to_remember/</link>
-      <pubDate>Wed, 31 Jul 2024 01:05:21 -0400</pubDate>
-      <guid>http://localhost:1313/posts/learning_to_remember/</guid>
-      <description>The Evolution of Memory in Neural Networks Recurrent Neural Networks A major limitation of vanilla neural networks is that they are unable to process variable-length structures: they map fixed-length inputs to fixed-length outputs by learning features over a fixed number of layers.</description>
-    </item>
-    <item>
-      <title>From Sight to Insight</title>
-      <link>http://localhost:1313/posts/sight_and_insight/</link>
-      <pubDate>Sun, 07 Jul 2024 22:10:00 -0400</pubDate>
-      <guid>http://localhost:1313/posts/sight_and_insight/</guid>
-      <description>Fei-Fei Li’s new book, ImageNet, and the beginnings of the deep learning revolution The ability to perceive our surroundings encouraged us to develop a mechanism for integrating, analyzing, and ultimately making sense of that perception.</description>
-    </item>
   </channel>
 </rss>

@@ -7,21 +7,6 @@
     <generator>Hugo</generator>
     <language>en-us</language>
     <copyright>© Copyright 2024</copyright>
-    <lastBuildDate>Sun, 07 Jul 2024 22:10:00 -0400</lastBuildDate>
     <atom:link href="http://localhost:1313/tags/bookish/index.xml" rel="self" type="application/rss+xml" />
-    <item>
-      <title>From Sight to Insight</title>
-      <link>http://localhost:1313/posts/sight_and_insight/</link>
-      <pubDate>Sun, 07 Jul 2024 22:10:00 -0400</pubDate>
-      <guid>http://localhost:1313/posts/sight_and_insight/</guid>
-      <description>Fei-Fei Li’s new book, ImageNet, and the beginnings of the deep learning revolution The ability to perceive our surroundings encouraged us to develop a mechanism for integrating, analyzing, and ultimately making sense of that perception.</description>
-    </item>
-    <item>
-      <title>Brave New World</title>
-      <link>http://localhost:1313/posts/brave_new_world/</link>
-      <pubDate>Wed, 26 Jun 2024 18:14:25 -0400</pubDate>
-      <guid>http://localhost:1313/posts/brave_new_world/</guid>
-      <description>‘Oh wonder! How many goodly creatures are there here! How beauteous mankind is! Oh brave new world, That has such people in’t.</description>
-    </item>
   </channel>
 </rss>

@@ -1,7 +1,6 @@
 +++
 title = 'Brave New World'
 date = 2024-06-26T18:14:25-04:00
-tags = ["bookish"]
 disqus = false
 +++
 
