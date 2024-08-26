@@ -19,4 +19,4 @@ Ongoing project under [Prof. Antonio Torralba](https://groups.csail.mit.edu/visi
 
 [Booksalotl](https://github.com/christykl/booksalotl) --- MERN stack web application for tracking and rating books and generating and sharing reading statistics. Integrated Google OAuth for secure user authentication, allowing personalized book management and implemented a book search feature utilizing the Google Books API.
 
-[Medify](https://github.com/christykl/Medify) --- Medical chatbot that strengthens communication between seniors and health professionals by translating bare symptoms into coherent descriptions of possible ailments in medical terminology. Created in 24 hours at HackMIT 2023.
+[Medify](https://github.com/christykl/Medify) --- Medical chatbot that strengthens communication between seniors and health professionals by translating bare symptoms into coherent descriptions of possible ailments in medical terminology. Created in 48 hours at HackMIT 2023.
