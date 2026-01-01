@@ -1,164 +1,189 @@
-<!DOCTYPE HTML>
+<!DOCTYPE html>
 <html lang="en">
-  <head>
-    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Christy Li</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=DM+Sans:ital,wght@0,400;0,500;0,600;1,400;1,500&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="stylesheet.css">
+</head>
+<body>
+  <!-- Subtle background elements -->
+  <div class="bg-shape bg-shape-1"></div>
+  <div class="bg-shape bg-shape-2"></div>
+  <div class="grain-overlay"></div>
 
-    <title>Christy Li</title>
+  <div class="container">
+    <!-- Header / Hero Section -->
+    <header class="hero">
+      <div class="hero-content">
+        <div class="hero-text">
+          <h1 class="name">Christy Li</h1>
+          <div class="bio">
+            <p>I am an undergrad at MIT studying CS and Physics. Currently researching automated harm remediation for computer use agents as a Research Scholar at <a href="https://www.matsprogram.org/">MATS</a>.</p>
+            <p>Broadly interested in building AI agents that learn and reason through environmental interactions, leveraging tools for complex, long-horizon tasks.</p>
+            <p class="personal-note">In my free time: reading, volleyball, and taste-testing every matcha drink in Boston.</p>
+          </div>
+          <nav class="social-links">
+            <a href="mailto:ckl@mit.edu" class="social-link">
+              <span class="social-icon">✉</span>
+              <span>Email</span>
+            </a>
+            <a href="https://scholar.google.com/citations?user=Q4zf1SYAAAAJ&hl=en" class="social-link">
+              <span class="social-icon">◈</span>
+              <span>Scholar</span>
+            </a>
+            <a href="https://x.com/christy_li_" class="social-link">
+              <span class="social-icon">𝕏</span>
+              <span>Twitter</span>
+            </a>
+            <a href="https://github.com/christykl/" class="social-link">
+              <span class="social-icon">⌘</span>
+              <span>Github</span>
+            </a>
+          </nav>
+        </div>
+        <div class="hero-image">
+          <div class="image-frame">
+            <img src="images/headshot.jpg" alt="Christy Li">
+          </div>
+        </div>
+      </div>
+    </header>
 
-    <meta name="author" content="Christy Li">
-    <meta name="viewport" content="width=device-width, initial-scale=1">
-    <link rel="shortcut icon" href="images/favicon/favicon.ico" type="image/x-icon">
-    <link rel="stylesheet" type="text/css" href="stylesheet.css">
-    
-  </head>
+    <!-- Publications Section -->
+    <section class="publications" id="publications">
+      <div class="section-header">
+        <h2>Publications</h2>
+        <div class="section-line"></div>
+      </div>
 
-  <body>
-    <table style="width:100%;max-width:800px;border:0px;border-spacing:0px;border-collapse:separate;margin-right:auto;margin-left:auto;"><tbody>
-      <tr style="padding:0px">
-        <td style="padding:0px">
-          <table style="width:100%;border:0px;border-spacing:0px;border-collapse:separate;margin-right:auto;margin-left:auto;"><tbody>
-            <tr style="padding:0px">
-              <td style="padding:2.5%;width:63%;vertical-align:middle">
-                <p class="name" style="text-align: center;">
-                  Christy Li
-                </p>
-                <p>I am an undergrad at MIT studying CS and Physics. Currently, I'm researching automated harm remediation for computer use agents as a Research Scholar at <a href="https://www.matsprogram.org/">ML Alignment and Theory Scholars (MATS)</a>.</p>
-					<p>I am broadly interested in building AI agents that can learn and reason effectively through interactions with their environment and leverage tools to complete complex, long-horizon tasks.</p>
-					<p>In my free time, I like to read, play volleyball, and slowly but surely taste test every matcha drink in Boston. If you'd like to chat about any of the above or just want to say hi, feel free to reach out!</p>
-                <p style="text-align:center">
-                  <a href="mailto:ckl@mit.edu">Email</a> &nbsp;◦&nbsp;
-                  <a href="https://scholar.google.com/citations?user=Q4zf1SYAAAAJ&hl=en">Scholar</a> &nbsp;◦&nbsp;
-                  <a href="https://x.com/christy_li_">Twitter</a> &nbsp;◦&nbsp;
-                  <a href="https://github.com/christykl/">Github</a>
-                </p>
-              </td>
-              <td style="padding:2.5%;width:37%;max-width:37%">
-                <a href="images/pfp.jpg"><img style="width:100%;max-width:100%;object-fit: cover; border-radius: 50%;" alt="profile photo" src="images/pfp.jpg" class="hoverZoomLink"></a>
-              </td>
-            </tr>
-          </tbody></table>
-          <table style="width:100%;border:0px;border-spacing:0px;border-collapse:separate;margin-right:auto;margin-left:auto;"><tbody>
-              <tr>
-              <td style="padding:16px;width:100%;vertical-align:middle">
-                <h2>Publications</h2>
-              </td>
-            </tr>
-          </tbody></table>
-          <table style="width:100%;border:0px;border-spacing:0px 10px;border-collapse:separate;margin-right:auto;margin-left:auto;"><tbody>
+      <div class="pub-grid">
+        <!-- Publication 1 -->
+        <article class="pub-card pub-card-featured">
+          <div class="pub-image">
+            <img src="images/computer_use.jpg" alt="Human-Guided Harm Recovery">
+            <div class="pub-year">2025</div>
+          </div>
+          <div class="pub-content">
+            <span class="pub-venue">Under Review</span>
+            <h3 class="pub-title">Human-Guided Harm Recovery for Computer Use Agents</h3>
+            <p class="pub-authors">
+              <strong>Christy Li</strong>,
+              <a href="https://skywang.me/">Sky CH. Wang</a>,
+              <a href="https://andipeng.com/">Andi Peng</a>,
+              <a href="https://www.mit.edu/~abobu/">Andreea Bobu</a>
+            </p>
+          </div>
+        </article>
 
-<tr>
-      <td style="padding:16px;width:50%;vertical-align:middle">
-        <img src='images/computer_use.jpg' width=100%>
-      </td>
-      <td style="padding:8px;width:80%;vertical-align:middle">
-        <strong>Human-Guided Harm Recovery for Computer Use Agents</strong> (under review)
-        <br>
-        <strong>Christy Li</strong>,
-        <a href="https://skywang.me/">Sky CH. Wang</a>,
-        <a href="https://andipeng.com/">Andi Peng</a>,
-        <a href="https://www.mit.edu/~abobu/">Andreea Bobu</a>
-      </td>
-    </tr>
+        <!-- Publication 2 -->
+        <article class="pub-card">
+          <div class="pub-image">
+            <img src="images/saia.jpg" alt="SAIA">
+            <div class="pub-year">2025</div>
+          </div>
+          <div class="pub-content">
+            <span class="pub-venue">NeurIPS 2025</span>
+            <h3 class="pub-title">Automated Detection of Visual Attribute Reliance with a Self-Reflective Agent</h3>
+            <p class="pub-authors">
+              <strong>Christy Li</strong>,
+              <a href="https://yusepp.github.io/">Josep Lopez Camuñas</a>,
+              <a href="https://www.linkedin.com/in/jake-touchet-557329297/">Jake Touchet</a>,
+              <a href="https://www.mit.edu/~jda/">Jacob Andreas</a>,
+              <a href="https://s3.sunai.uoc.edu/web/agata/index.html">Agata Lapedriza Garcia</a>,
+              <a href="https://groups.csail.mit.edu/vision/torralbalab/">Antonio Torralba</a>,
+              <a href="https://tamarott.github.io/">Tamar Rott Shaham</a>
+            </p>
+            <div class="pub-links">
+              <a href="https://christykl.github.io/saia-website/">Project Page</a>
+              <a href="https://arxiv.org/abs/2510.21704">arXiv</a>
+              <a href="https://github.com/christykl/saia">Code</a>
+            </div>
+          </div>
+        </article>
 
-<tr>
-      <td style="padding:16px;width:50%;vertical-align:middle">
-        <img src='images/saia.jpg' width=100%>
-      </td>
-      <td style="padding:8px;width:80%;vertical-align:middle">
-        <strong>Automated Detection of Visual Attribute Reliance with a Self-Reflective Agent</strong>
-        <br>
-        <strong>Christy Li</strong>,
-        <a href="https://yusepp.github.io/">Josep Lopez Camuñas</a>,
-        <a href="https://www.linkedin.com/in/jake-touchet-557329297/">Jake Touchet</a>,
-        <a href="https://www.mit.edu/~jda/">Jacob Andreas</a>,
-        <a href="https://s3.sunai.uoc.edu/web/agata/index.html">Agata Lapedriza Garcia</a>,
-        <a href="https://groups.csail.mit.edu/vision/torralbalab/">Antonio Torralba</a>,
-        <a href="https://tamarott.github.io/">Tamar Rott Shaham</a>
-        <br>
-        <em>NeurIPS</em>, 2025
-        <br>
-        <a href="https://christykl.github.io/saia-website/">project page</a> &nbsp;◦&nbsp; <a href="https://arxiv.org/abs/2510.21704">arxiv</a> &nbsp;◦&nbsp; <a href="https://github.com/christykl/saia">code</a>
-        <p></p>
-      </td>
-    </tr>
+        <!-- Publication 3 -->
+        <article class="pub-card">
+          <div class="pub-image">
+            <img src="images/qd_lasers.jpg" alt="Quantum Dot Lasers">
+            <div class="pub-year">2023</div>
+          </div>
+          <div class="pub-content">
+            <span class="pub-venue">Advanced Photonics Research</span>
+            <h3 class="pub-title">Impact of Pocket Geometry on Quantum Dot Lasers Grown on Silicon Wafers</h3>
+            <p class="pub-authors">
+              <a href="https://scholar.google.com/citations?user=Gg-Y9SwAAAAJ&hl=en">Rosalyn Koscica</a>,
+              <a href="https://scholar.google.com/citations?user=3ZbpvkcAAAAJ&hl=en">Chen Shang</a>,
+              <a href="https://scholar.google.com/citations?user=wEZxrd0AAAAJ&hl=en">Kaiyin Feng</a>,
+              <a href="https://scholar.google.com/citations?user=wtFKQkQAAAAJ&hl=en">Eamonn Thomas Hughes</a>,
+              <strong>Christy Li</strong>,
+              <a href="https://scholar.google.com/citations?user=HMH5xqYAAAAJ&hl=en">Alec Skipper</a>,
+              <a href="https://scholar.google.com/citations?user=c6rbVa0AAAAJ&hl=en">John Bowers</a>
+            </p>
+            <div class="pub-links">
+              <a href="https://advanced.onlinelibrary.wiley.com/doi/full/10.1002/adpr.202300317">Paper</a>
+            </div>
+          </div>
+        </article>
 
-<tr>
-      <td style="padding:16px;width:50%;vertical-align:middle">
-        <img src='images/qd_lasers.jpg' width=100%>
-      </td>
-      <td style="padding:8px;width:80%;vertical-align:middle">
-        <strong>Impact of Pocket Geometry on Quantum Dot Lasers Grown on Silicon Wafers</strong>
-        <br>
-        <a href="https://scholar.google.com/citations?user=Gg-Y9SwAAAAJ&hl=en">Rosalyn Koscica</a>,
-        <a href="https://scholar.google.com/citations?user=3ZbpvkcAAAAJ&hl=en">Chen Shang</a>,
-        <a href="https://scholar.google.com/citations?user=wEZxrd0AAAAJ&hl=en">Kaiyin Feng</a>,
-        <a href="https://scholar.google.com/citations?user=wtFKQkQAAAAJ&hl=en">Eamonn Thomas Hughes</a>,
-        <strong>Christy Li</strong>,
-        <a href="https://scholar.google.com/citations?user=HMH5xqYAAAAJ&hl=en">Alec Skipper</a>,
-        <a href="https://scholar.google.com/citations?user=c6rbVa0AAAAJ&hl=en">John Bowers</a>
-        <br>
-        <em>Advanced Photonics Research</em>, 2023
-        <br>
-        <a href="https://advanced.onlinelibrary.wiley.com/doi/full/10.1002/adpr.202300317">paper</a>
-        <p></p>
-      </td>
-    </tr>
+        <!-- Publication 4 -->
+        <article class="pub-card">
+          <div class="pub-image">
+            <img src="images/resonators.jpg" alt="Resonators">
+            <div class="pub-year">2023</div>
+          </div>
+          <div class="pub-content">
+            <span class="pub-venue">CLEO 2023</span>
+            <h3 class="pub-title">Dispersion Engineering and Low-Loss Optimization of Footprint-Efficient and Rotationally Asymmetric Resonators</h3>
+            <p class="pub-authors">
+              <strong>Christy Li</strong>,
+              <a href="https://www.nist.gov/people/daron-westly">Daron Westly</a>,
+              <a href="https://scholar.google.com/citations?user=JOXpfvIAAAAJ&hl=en">Kartik Srinivasan</a>,
+              <a href="https://scholar.google.fr/citations?user=6fBdsmYAAAAJ&hl=fr">Gregory Moille</a>
+            </p>
+            <div class="pub-links">
+              <a href="documents/CLi_CLEO_poster.pdf">Poster</a>
+            </div>
+          </div>
+        </article>
 
-<tr>
-      <td style="padding:16px;width:50%;vertical-align:middle">
-        <img src='images/resonators.jpg' width=100%>
-      </td>
-      <td style="padding:8px;width:80%;vertical-align:middle">
-        <strong>Dispersion Engineering and Low-Loss Optimization of Footprint-Efficient and Rotationally Asymmetric Resonators</strong>
-        <br>
-        <strong>Christy Li</strong>,
-        <a href="https://www.nist.gov/people/daron-westly">Daron Westly</a>,
-        <a href="https://scholar.google.com/citations?user=JOXpfvIAAAAJ&hl=en">Kartik Srinivasan</a>,
-        <a href="https://scholar.google.fr/citations?user=6fBdsmYAAAAJ&hl=fr">Gregory Moille</a>
-        <br>
-        <em>Conference on Lasers and Electro-Optics</em>, 2023
-        <br>
-        <a href="documents/CLi_CLEO_poster.pdf">poster</a>
-        <p></p>
-      </td>
-    </tr>
+        <!-- Publication 5 -->
+        <article class="pub-card">
+          <div class="pub-image">
+            <img src="images/2d_freq_comb.jpg" alt="2D Frequency Comb">
+            <div class="pub-year">2023</div>
+          </div>
+          <div class="pub-content">
+            <span class="pub-venue">arXiv Preprint</span>
+            <h3 class="pub-title">Two-dimensional nonlinear mixing between a dissipative Kerr soliton and continuous waves for a higher-dimension frequency comb</h3>
+            <p class="pub-authors">
+              <a href="https://scholar.google.fr/citations?user=6fBdsmYAAAAJ&hl=fr">Gregory Moille</a>,
+              <strong>Christy Li</strong>,
+              <a href="https://srinivasan.jqi.umd.edu/people/jordan-stone">Jordan Stone</a>,
+              <a href="https://scholar.google.com/citations?user=sjEo7CoAAAAJ&hl=en">Michal Chojnacky</a>,
+              <a href="https://scholar.google.com/citations?user=SLUST8cAAAAJ&hl=en">Pradyoth Shandilya</a>,
+              <a href="https://scholar.google.com/citations?user=YAKCkSgAAAAJ&hl=fr">Yanne Chembo</a>,
+              <a href="https://scholar.google.com/citations?user=-eVcAC8AAAAJ&hl=en">Avik Dutt</a>,
+              <a href="https://scholar.google.com/citations?user=OAI6XwsAAAAJ&hl=en">Curtis Menyuk</a>,
+              <a href="https://scholar.google.com/citations?user=JOXpfvIAAAAJ&hl=en">Kartik Srinivasan</a>
+            </p>
+            <div class="pub-links">
+              <a href="https://arxiv.org/abs/2303.10026">arXiv</a>
+            </div>
+          </div>
+        </article>
+      </div>
+    </section>
 
-    <tr>
-          <td style="padding:16px;width:50%;vertical-align:middle">
-            <img src='images/2d_freq_comb.jpg' width=100%>
-          </td>
-          <td style="padding:8px;width:80%;vertical-align:middle">
-            <strong>Two-dimensional nonlinear mixing between a dissipative Kerr soliton and continuous waves for a higher-dimension frequency comb</strong>
-            <br>
-            <a href="https://scholar.google.fr/citations?user=6fBdsmYAAAAJ&hl=fr">Gregory Moille</a>,
-            <strong>Christy Li</strong>,
-            <a href="https://srinivasan.jqi.umd.edu/people/jordan-stone">Jordan Stone</a>,
-            <a href="https://scholar.google.com/citations?user=sjEo7CoAAAAJ&hl=en">Michal Chojnacky</a>,
-            <a href="https://scholar.google.com/citations?user=SLUST8cAAAAJ&hl=en">Pradyoth Shandilya</a>,
-            <a href="https://scholar.google.com/citations?user=YAKCkSgAAAAJ&hl=fr">Yanne Chembo</a>,
-            <a href="https://scholar.google.com/citations?user=-eVcAC8AAAAJ&hl=en">Avik Dutt</a>,
-            <a href="https://scholar.google.com/citations?user=OAI6XwsAAAAJ&hl=en">Curtis Menyuk</a>,
-            <a href="https://scholar.google.com/citations?user=JOXpfvIAAAAJ&hl=en">Kartik Srinivasan</a>
-            <br>
-            <a href="https://arxiv.org/abs/2303.10026">arxiv</a>
-            <p></p>
-          </td>
-        </tr>
-
-          </tbody></table>
-					
-          <table style="width:100%;border:0px;border-spacing:0px;border-collapse:separate;margin-right:auto;margin-left:auto;"><tbody>
-            <tr>
-              <td style="padding:0px">
-                <br>
-                <p style="text-align:center;font-size:small;">
-                  Modified from <a href="https://github.com/jonbarron/jonbarron_website">Jon Barron's website</a>.
-                </p>
-              </td>
-            </tr>
-          </tbody></table>
-        </td>
-      </tr>
-    </table>
-  </body>
+    <!-- Footer -->
+    <footer class="footer">
+      <div class="footer-content">
+        <p>Modified from <a href="https://github.com/jonbarron/jonbarron_website">Jon Barron's website</a></p>
+      </div>
+    </footer>
+  </div>
+</body>
 </html>
