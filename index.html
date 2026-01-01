@@ -7,6 +7,8 @@
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=DM+Sans:ital,wght@0,400;0,500;0,600;1,400;1,500&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/jpswalsh/academicons@1/css/academicons.min.css">
   <link rel="stylesheet" href="stylesheet.css">
 </head>
 <body>
@@ -22,26 +24,25 @@
         <div class="hero-text">
           <h1 class="name">Christy Li</h1>
           <div class="bio">
-            <p>I am an undergrad at MIT studying CS and Physics. Currently researching automated harm remediation for computer use agents as a Research Scholar at <a href="https://www.matsprogram.org/">MATS</a>.</p>
-            <p>Broadly interested in building AI agents that learn and reason through environmental interactions, leveraging tools for complex, long-horizon tasks.</p>
-            <p class="personal-note">In my free time: reading, volleyball, and taste-testing every matcha drink in Boston.</p>
+            <p>I am an undergrad at MIT studying CS and Physics. Currently, I'm researching automated harm remediation for computer use agents as a Research Scholar at <a href="https://www.matsprogram.org/">ML Alignment and Theory Scholars (MATS)</a>. I am broadly interested in building AI agents that can learn and adapt through interactions with their environment and users to <em>effectively collaborate</em> with humans on complex, long-horizon tasks.</p>
+            <p>In my free time, I like to read, play volleyball, and slowly but surely taste test every matcha drink in Boston. If you'd like to chat about any of the above or just want to say hi, feel free to reach out!</p>
           </div>
           <nav class="social-links">
             <a href="mailto:ckl@mit.edu" class="social-link">
-              <span class="social-icon">✉</span>
+              <span class="social-icon"><i class="fas fa-envelope"></i></span>
               <span>Email</span>
             </a>
-            <a href="https://scholar.google.com/citations?user=Q4zf1SYAAAAJ&hl=en" class="social-link">
-              <span class="social-icon">◈</span>
-              <span>Scholar</span>
+            <a href="https://github.com/christykl/" class="social-link">
+              <span class="social-icon"><i class="fab fa-github"></i></span>
+              <span>Github</span>
             </a>
             <a href="https://x.com/christy_li_" class="social-link">
-              <span class="social-icon">𝕏</span>
+              <span class="social-icon"><i class="fab fa-x-twitter"></i></span>
               <span>Twitter</span>
             </a>
-            <a href="https://github.com/christykl/" class="social-link">
-              <span class="social-icon">⌘</span>
-              <span>Github</span>
+            <a href="https://scholar.google.com/citations?user=Q4zf1SYAAAAJ&hl=en" class="social-link">
+              <span class="social-icon"><i class="ai ai-google-scholar"></i></span>
+              <span>Scholar</span>
             </a>
           </nav>
         </div>
@@ -56,7 +57,7 @@
     <!-- Publications Section -->
     <section class="publications" id="publications">
       <div class="section-header">
-        <h2>Publications</h2>
+        <h2>Research</h2>
         <div class="section-line"></div>
       </div>
 
@@ -172,6 +173,82 @@
             </p>
             <div class="pub-links">
               <a href="https://arxiv.org/abs/2303.10026">arXiv</a>
+            </div>
+          </div>
+        </article>
+      </div>
+    </section>
+
+    <!-- Projects Section -->
+    <section class="publications" id="publications">
+      <div class="section-header">
+        <h2>Other Projects</h2>
+        <div class="section-line"></div>
+      </div>
+
+      <div class="pub-grid">
+        <!-- Project 1 -->
+        <article class="pub-card">
+          <div class="pub-image">
+            <img src="images/fpga.jpg" alt="FPGA">
+          </div>
+          <div class="pub-content">
+            <span class="pub-venue">FPGA Lab (6.2050) Final Project</span>
+            <h3 class="pub-title">Optical FlowPGA</h3>
+            <p class="pub-authors">
+              Implemented an FPGA-based motion tracking system for real-time detection and visualization of salient feature points on moving objects in video streams.
+            </p>
+            <div class="pub-links">
+              <a href="documents/6.2050 Final Project Report.pdf">Report</a>
+            </div>
+          </div>
+        </article>
+
+        <!-- Project 2 -->
+        <article class="pub-card">
+          <div class="pub-image">
+            <img src="images/deep_learning.jpg" alt="Deep Learning">
+          </div>
+          <div class="pub-content">
+            <span class="pub-venue">Deep Learning (6.7960) Final Project</span>
+            <h3 class="pub-title">World Modeling with Graph Neural Networks (GNNs)</h3>
+            <p class="pub-authors">
+              Trained GNN-based structured world models for next-state prediction in toy environments including block pushing, n-body gravitational physics, and Atari games, achieving up to 100% accuracy for short-horizon predictions.
+            </p>
+            <div class="pub-links">
+              <a href="documents/DL_final_project_blog.pdf">Report</a>
+            </div>
+          </div>
+        </article>
+
+        <!-- Project 3 -->
+        <article class="pub-card">
+          <div class="pub-image">
+            <img src="images/redagent.jpg" alt="RedAgent">
+          </div>
+          <div class="pub-content">
+            <h3 class="pub-title">RedAgent</h3>
+            <p class="pub-authors">
+              A GPT-4o agent for context-aware red teaming of LLMs, based on the <a href="https://arxiv.org/abs/2407.16667">RedAgent</a> paper. Multi-agent system with long and short-term memory capabilities built with LangChain/LangGraph.
+            </p>
+            <div class="pub-links">
+              <a href="https://github.com/christykl/RedAgent">Code</a>
+            </div>
+          </div>
+        </article>
+
+        <!-- Project 4 -->
+        <article class="pub-card">
+          <div class="pub-image">
+            <img src="images/booksalotl.jpg" alt="booksalotl">
+          </div>
+          <div class="pub-content">
+            <h3 class="pub-title">booksalotl</h3>
+            <p class="pub-authors">
+              MERN stack web application for tracking and rating books and generating and sharing personalized reading statistics. Integrated Google OAuth for secure user authentication and Google Books API for book search.
+            </p>
+            <div class="pub-links">
+              <a href="https://github.com/christykl/booksalotl">Code</a>
             </div>
           </div>
         </article>
